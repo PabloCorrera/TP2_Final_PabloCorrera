@@ -1,5 +1,5 @@
 import express from 'express'
-import RouterReservas from './router/reservas.js'
+import RouterReservas from './router/votos.js'
 
 const app = express()
 app.use(express.json())
@@ -10,7 +10,7 @@ app.use(express.static('public'))
 // -----------------------------------------------
 //         API RESTful : Productos
 // -----------------------------------------------
-app.use('', new RouterReservas().start())
+app.use('/', new RouterReservas().start())
 
 // -----------------------------------------------
 //        LISTEN DEL SERVIDOR EXPRESS
